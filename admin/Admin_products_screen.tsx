@@ -50,20 +50,15 @@ export default function Admin_products_screen({ navigation }: any) {
     <View style={{ flex: 1, backgroundColor: '#B99A6F' }}>
       <ScrollView style={styles.dashboardContainer} showsVerticalScrollIndicator={false}>
         <View style={styles.adminHeaderRow}>
-          <TouchableOpacity style={styles.adminHeaderIconButton}>
-            <Text style={styles.adminHeaderIconText}>📥</Text>
-          </TouchableOpacity>
-          <View style={styles.adminHeaderCenter}>
-            <Text style={styles.adminHeaderBrand}>Casa Craft</Text>
-          </View>
-          <TouchableOpacity style={styles.adminHeaderIconButton}>
-            <Text style={styles.adminHeaderIconText}>🔔</Text>
-          </TouchableOpacity>
+          <Text style={styles.adminHeaderBrand}>Casa Craft</Text>
         </View>
 
         <View style={styles.productsHeaderTitleRow}>
           <Text style={styles.productsHeaderTitle}>Products</Text>
-          <TouchableOpacity style={styles.addProductButton}>
+          <TouchableOpacity
+            style={styles.addProductButton}
+            onPress={() => navigation.navigate('AdminAddProduct')}
+          >
             <Text style={styles.addProductButtonText}>+ Add product</Text>
           </TouchableOpacity>
         </View>
@@ -97,12 +92,17 @@ export default function Admin_products_screen({ navigation }: any) {
           ))}
         </View>
 
-        <Text style={styles.productHelperText}>
-          Use the switch to show or hide a product in the customer app.
-        </Text>
-
         {filteredProducts.map(({ item, visible, stockQty, leadTime }) => (
-          <View key={item.id} style={styles.adminProductCard}>
+          <TouchableOpacity
+            key={item.id}
+            style={styles.adminProductCard}
+            activeOpacity={0.7}
+            onPress={() =>
+              navigation.navigate('AdminAddProduct', {
+                product: { item, visible, stockQty, leadTime },
+              })
+            }
+          >
             <View style={styles.adminProductTopRow}>
               <View style={styles.adminProductThumb}>
                 <Text style={styles.adminProductThumbEmoji}>🛋️</Text>
@@ -162,13 +162,13 @@ export default function Admin_products_screen({ navigation }: any) {
                   <View style={styles.stockBadgeMadeOrder}>
                     <Text style={styles.stockBadgeTextMadeOrder}>{leadTime}</Text>
                   </View>
-                  <TouchableOpacity style={styles.editProductButton}>
+                  <View style={styles.editProductButton}>
                     <Text style={styles.editProductButtonText}>✎ Edit</Text>
-                  </TouchableOpacity>
+                  </View>
                 </>
               )}
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
 
         <View style={{ height: 20 }} />

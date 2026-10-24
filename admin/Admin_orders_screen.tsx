@@ -93,7 +93,12 @@ export default function Admin_orders_screen({ navigation }: any) {
     const pill = statusPillStyle(order.status);
 
     return (
-      <View key={order.id} style={styles.orderCardWrapper}>
+      <TouchableOpacity
+        key={order.id}
+        style={styles.orderCardWrapper}
+        activeOpacity={0.7}
+        onPress={() => navigation.navigate('AdminOrderDetails', { order })}
+      >
         <View style={styles.orderCardTopRow}>
           <Text style={styles.orderCode}>{order.code}</Text>
           <View style={pill.box}>
@@ -103,9 +108,6 @@ export default function Admin_orders_screen({ navigation }: any) {
 
         <View style={styles.orderCustomerRow}>
           <Text style={styles.orderCustomerName}>{order.customerName}</Text>
-          <TouchableOpacity onPress={() => navigation.navigate('AdminOrderDetails', { order })}>
-            <Text style={styles.orderDetailsLink}>Details ›</Text>
-          </TouchableOpacity>
         </View>
 
         <View style={styles.orderProductRow}>
@@ -158,31 +160,6 @@ export default function Admin_orders_screen({ navigation }: any) {
               <Text style={styles.orderMetaText}>{order.fulfillmentNote}</Text>
             </View>
 
-            <View style={styles.paymentProgressRow}>
-              <Text style={styles.paymentProgressLabel}>
-                Paid {formatPrice(order.amountPaid ?? 0)} of {formatPrice(order.orderTotal ?? 0)}
-              </Text>
-              {order.amountPaid === order.orderTotal ? (
-                <Text style={styles.paymentProgressLabelPaidFull}>✓ Paid in full</Text>
-              ) : (
-                <Text style={styles.paymentProgressLabelBalance}>
-                  Balance {formatPrice((order.orderTotal ?? 0) - (order.amountPaid ?? 0))}
-                </Text>
-              )}
-            </View>
-            <View style={styles.paymentProgressTrack}>
-              <View
-                style={[
-                  styles.paymentProgressFill,
-                  {
-                    width: `${
-                      order.orderTotal ? Math.min(100, ((order.amountPaid ?? 0) / order.orderTotal) * 100) : 0
-                    }%`,
-                  },
-                ]}
-              />
-            </View>
-
             {order.status === 'Ready for pickup' ? (
               <TouchableOpacity
                 style={styles.fulfillmentActionButton}
@@ -202,20 +179,12 @@ export default function Admin_orders_screen({ navigation }: any) {
         )}
 
         {order.status === 'Completed' && (
-          <>
-            <View style={styles.orderMetaRow}>
-              <Text style={styles.orderMetaIcon}>📦</Text>
-              <Text style={styles.orderMetaText}>{order.completedNote}</Text>
-            </View>
-            <View style={styles.paymentProgressRow}>
-              <Text style={styles.paymentProgressLabel}>
-                Paid {formatPrice(order.amountPaid ?? 0)} of {formatPrice(order.orderTotal ?? 0)}
-              </Text>
-              <Text style={styles.paymentProgressLabelPaidFull}>✓ Paid in full</Text>
-            </View>
-          </>
+          <View style={styles.orderMetaRow}>
+            <Text style={styles.orderMetaIcon}>📦</Text>
+            <Text style={styles.orderMetaText}>{order.completedNote}</Text>
+          </View>
         )}
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -223,15 +192,7 @@ export default function Admin_orders_screen({ navigation }: any) {
     <View style={{ flex: 1, backgroundColor: '#B99A6F' }}>
       <ScrollView style={styles.dashboardContainer} showsVerticalScrollIndicator={false}>
         <View style={styles.adminHeaderRow}>
-          <TouchableOpacity style={styles.adminHeaderIconButton}>
-            <Text style={styles.adminHeaderIconText}>📥</Text>
-          </TouchableOpacity>
-          <View style={styles.adminHeaderCenter}>
-            <Text style={styles.adminHeaderBrand}>Casa Craft</Text>
-          </View>
-          <TouchableOpacity style={styles.adminHeaderIconButton}>
-            <Text style={styles.adminHeaderIconText}>🔔</Text>
-          </TouchableOpacity>
+          <Text style={styles.adminHeaderBrand}>Casa Craft</Text>
         </View>
 
         <Text style={styles.ordersHeaderTitle}>Orders</Text>

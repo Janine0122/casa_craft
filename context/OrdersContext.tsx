@@ -12,9 +12,8 @@ export type Order = {
   specialRequest?: string;
   quantity: number;
   fulfillment: 'Pickup' | 'Delivery';
-  deliveryAddress?: string;
-  deliveryTime?: string;
-  preferredDate: string;
+  address: string;
+  preferredDate: string; // pickup date, or "Within 7 days" for delivery
   total: number;
   deposit: number;
   status: OrderStatus;

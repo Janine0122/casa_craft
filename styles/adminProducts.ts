@@ -8,7 +8,7 @@ export const adminProductsStyles = {
     marginBottom: 16,
   },
   productsHeaderTitle: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: '700',
     color: colors.text,
   },
@@ -21,7 +21,7 @@ export const adminProductsStyles = {
     paddingVertical: 10,
   },
   addProductButtonText: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '700',
     color: '#FFFFFF',
     marginLeft: 4,
@@ -41,7 +41,7 @@ export const adminProductsStyles = {
     backgroundColor: colors.text,
   },
   productFilterChipText: {
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '600',
     color: colors.text,
   },
@@ -49,7 +49,7 @@ export const adminProductsStyles = {
     color: '#FFFFFF',
   },
   productHelperText: {
-    fontSize: 11,
+    fontSize: 12,
     color: '#8A8A8A',
     marginBottom: 16,
   },
@@ -84,7 +84,7 @@ export const adminProductsStyles = {
     alignItems: 'flex-start',
   },
   adminProductName: {
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: '700',
     color: colors.text,
     flex: 1,
@@ -96,13 +96,13 @@ export const adminProductsStyles = {
     marginTop: 4,
   },
   adminProductPrice: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '700',
     color: colors.text,
     marginRight: 8,
   },
   adminProductCategory: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#8A8A8A',
   },
   colorDotsRow: {
@@ -119,7 +119,7 @@ export const adminProductsStyles = {
     borderColor: '#E3D6C2',
   },
   sizesCountText: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#8A8A8A',
     marginLeft: 4,
   },
@@ -141,12 +141,12 @@ export const adminProductsStyles = {
     paddingVertical: 5,
   },
   stockBadgeTextInStock: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: '700',
     color: '#2E8B57',
   },
   stockBadgeTextMadeOrder: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: '700',
     color: '#3159A8',
   },
@@ -163,12 +163,12 @@ export const adminProductsStyles = {
     justifyContent: 'center',
   },
   stockStepperButtonText: {
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: '700',
     color: colors.text,
   },
   stockStepperValue: {
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: '700',
     color: colors.text,
     marginHorizontal: 14,
@@ -182,7 +182,7 @@ export const adminProductsStyles = {
     paddingVertical: 7,
   },
   editProductButtonText: {
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '700',
     color: colors.text,
     marginLeft: 4,

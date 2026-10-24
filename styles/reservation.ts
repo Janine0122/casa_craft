@@ -65,6 +65,31 @@ export const reservationStyles = {
   fulfillmentToggleTextSelected: {
     color: '#FFFFFF',
   },
+  addressErrorText: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#B4433A',
+    marginTop: -8,
+    marginBottom: 16,
+  },
+  deliveryNoticeBox: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    backgroundColor: '#DFF3E6',
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 4,
+  },
+  deliveryNoticeIcon: {
+    fontSize: 16,
+    marginRight: 10,
+  },
+  deliveryNoticeText: {
+    flex: 1,
+    fontSize: 13,
+    color: '#2E6B45',
+    lineHeight: 18,
+  },
   timeOptionRow: {
     flexDirection: 'row',
     gap: 10,

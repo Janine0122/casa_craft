@@ -16,27 +16,27 @@ export const adminDashboardStyles = {
     justifyContent: 'center',
   },
   adminHeaderIconText: {
-    fontSize: 18,
+    fontSize: 20,
   },
   adminHeaderCenter: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   adminHeaderBrand: {
-    fontSize: 18,
+    fontSize: 26,
     fontStyle: 'italic',
     fontWeight: '700',
     color: colors.text,
-    marginLeft: 8,
+    marginLeft: 0,
   },
   greetingText: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: '700',
     color: colors.text,
     marginBottom: 4,
   },
   greetingDate: {
-    fontSize: 13,
+    fontSize: 14,
     color: '#8A8A8A',
     marginBottom: 16,
   },
@@ -53,7 +53,7 @@ export const adminDashboardStyles = {
     marginBottom: 8,
   },
   balanceCardLabel: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '600',
     color: '#8A8A8A',
   },
@@ -64,12 +64,12 @@ export const adminDashboardStyles = {
     paddingVertical: 4,
   },
   balanceCardOrdersPillText: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: '600',
     color: colors.text,
   },
   balanceCardAmount: {
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: '700',
     color: colors.text,
     marginBottom: 12,
@@ -87,7 +87,7 @@ export const adminDashboardStyles = {
     borderRadius: 3,
   },
   balanceCardFootnote: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#8A8A8A',
   },
   adminStatRow: {
@@ -104,17 +104,17 @@ export const adminDashboardStyles = {
     alignItems: 'flex-start',
   },
   adminStatIcon: {
-    fontSize: 16,
+    fontSize: 18,
     marginBottom: 8,
   },
   adminStatValue: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '700',
     color: colors.text,
     marginBottom: 2,
   },
   adminStatLabel: {
-    fontSize: 11,
+    fontSize: 12,
     color: '#8A8A8A',
   },
   adminSectionHeaderRow: {
@@ -124,12 +124,12 @@ export const adminDashboardStyles = {
     marginBottom: 12,
   },
   adminSectionTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '700',
     color: colors.text,
   },
   adminSectionLink: {
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '600',
     color: colors.text,
     textDecorationLine: 'underline',
@@ -152,19 +152,19 @@ export const adminDashboardStyles = {
     marginRight: 12,
   },
   attentionIconText: {
-    fontSize: 16,
+    fontSize: 18,
   },
   attentionInfo: {
     flex: 1,
   },
   attentionTitle: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '700',
     color: colors.text,
     marginBottom: 2,
   },
   attentionSubtitle: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#8A8A8A',
   },
   attentionActionButton: {
@@ -174,7 +174,7 @@ export const adminDashboardStyles = {
     paddingVertical: 8,
   },
   attentionActionText: {
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '700',
     color: colors.text,
   },
@@ -191,7 +191,7 @@ export const adminDashboardStyles = {
     marginBottom: 4,
   },
   scheduleTimeType: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '700',
     color: colors.text,
   },
@@ -202,18 +202,18 @@ export const adminDashboardStyles = {
     paddingVertical: 3,
   },
   scheduleStatusText: {
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: '700',
     color: '#2E8B57',
   },
   scheduleCustomerName: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '600',
     color: colors.text,
     marginBottom: 2,
   },
   scheduleDescription: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#8A8A8A',
   },
   adminTabBar: {
@@ -228,10 +228,10 @@ export const adminDashboardStyles = {
     alignItems: 'center',
   },
   adminTabIcon: {
-    fontSize: 20,
+    fontSize: 22,
   },
   adminTabLabel: {
-    fontSize: 11,
+    fontSize: 12,
     color: colors.text,
     marginTop: 2,
   },
@@ -244,7 +244,7 @@ export const adminDashboardStyles = {
     justifyContent: 'center',
   },
   placeholderScreenText: {
-    fontSize: 14,
+    fontSize: 15,
     color: '#8A8A8A',
   },
 } as const;

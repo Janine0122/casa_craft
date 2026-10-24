@@ -35,15 +35,7 @@ export default function Admin_dashboard_screen({ navigation }: any) {
     <View style={{ flex: 1, backgroundColor: '#B99A6F' }}>
       <ScrollView style={styles.dashboardContainer} showsVerticalScrollIndicator={false}>
         <View style={styles.adminHeaderRow}>
-          <TouchableOpacity style={styles.adminHeaderIconButton}>
-            <Text style={styles.adminHeaderIconText}>📥</Text>
-          </TouchableOpacity>
-          <View style={styles.adminHeaderCenter}>
-            <Text style={styles.adminHeaderBrand}>Casa Craft</Text>
-          </View>
-          <TouchableOpacity style={styles.adminHeaderIconButton}>
-            <Text style={styles.adminHeaderIconText}>🔔</Text>
-          </TouchableOpacity>
+          <Text style={styles.adminHeaderBrand}>Casa Craft</Text>
         </View>
 
         <Text style={styles.greetingText}>{getGreeting()}, Admin</Text>
